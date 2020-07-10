@@ -6,7 +6,7 @@ Accounts manages login,register,logout,updating user information<br>
 Personal manages the home screen .<br>
 
 Things still needed to be worked upon-<br>
-Resetting user password. Currently only email and username can be changed.<br>
+Change the reset password screen.<br>
 Integrating the front-end.<br>
 
 
