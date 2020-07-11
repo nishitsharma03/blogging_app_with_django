@@ -21,7 +21,7 @@ class BlogPost(models.Model):
         upload_to=upload_location, null=False, blank=False)
     date_published = models.DateTimeField(
         auto_now_add=True, verbose_name="date published")
-    date_published = models.DateTimeField(
+    date_updated = models.DateTimeField(
         auto_now=True, verbose_name="date updated")
     author = models.ForeignKey(
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE)

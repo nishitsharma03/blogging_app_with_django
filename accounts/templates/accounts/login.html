@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-
+{% load static %}
 {% block content %}
 <style type="text/css">
 	
@@ -42,6 +42,9 @@
 <form class="form-signin" method="post">
 	{% csrf_token %}
   
+  <div class="d-flex flex flex-column pb-3">
+    <img class="img-fluid mx-auto d-block" src="{% static 'ANI_6185.jpg' %}" alt="Website Logo" width="72" height="72">
+  </div>
   <h1 class="h3 mb-3 font-weight-normal">Login</h1>
   
   <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>

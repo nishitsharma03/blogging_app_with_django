@@ -6,6 +6,8 @@ from django.contrib.auth import login, authenticate, logout
 
 from accounts.forms import RegistrationForm, AccountAuthenticationForm, AccountUpdateForm
 
+from blog.models import BlogPost
+
 
 def registration_view(request):
     context = {}
@@ -77,4 +79,12 @@ def account_view(request):
         form = AccountUpdateForm(
             initial={"email": request.user.email, "username": request.user.username})
     context['account_form'] = form
+
+    blog_posts = BlogPost.objects.filter(author=request.user)
+    context['blog_posts'] = blog_posts
     return render(request, 'accounts/account.html', context)
+
+
+def must_authenticate_view(request):
+
+    return render(request, 'accounts/must_authenticate.html', {})
